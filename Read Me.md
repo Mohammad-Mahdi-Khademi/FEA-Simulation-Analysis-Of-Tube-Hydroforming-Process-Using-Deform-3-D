@@ -60,9 +60,13 @@ The study includes:
 
 ## 📂 Repository Structure
 ├── Report.pdf # Full project report
+
 ├── solidworks_model/ # CAD files of tube, dies, plungers
+
 ├── abaqus_simulation/ # Abaqus CAE/ODB files
+
 ├── images/ # Screenshots of results (stress, strain, deformation)
+
 └── README.md # This file
 
 
