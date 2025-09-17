@@ -1,0 +1,623 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2023 replay file
+# Internal Version: 2022_09_28-21.41.55 183150
+# Run by Amir on Fri Jun 20 14:14:59 2025
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=114.44270324707, 
+    height=122.148155212402)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+openMdb(pathName="D:/sami's project/abaqus/first_try.cae")
+#: The model database "D:\sami's project\abaqus\first_try.cae" has been opened.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+p = mdb.models['Model-1'].parts['lower die']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+import os
+os.chdir(r"D:\sami's project\abaqus\Directory1")
+session.viewports['Viewport: 1'].partDisplay.setValues(mesh=ON)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=OFF)
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=ON, optimizationTasks=OFF, 
+    geometricRestrictions=OFF, stopConditions=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=OFF)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=256.62, 
+    farPlane=449.746, width=126.373, height=57.2896, viewOffsetX=0.229976, 
+    viewOffsetY=8.87109)
+session.viewports['Viewport: 1'].view.setValues(session.views['Front'])
+session.viewports['Viewport: 1'].view.setValues(session.views['Back'])
+session.viewports['Viewport: 1'].view.setValues(session.views['Top'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=275.533, 
+    farPlane=380.517, width=186.85, height=84.7059, viewOffsetX=-3.10055, 
+    viewOffsetY=-12.7836)
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=291.207, 
+    farPlane=472.894, width=87.4159, height=39.6287, viewOffsetX=13.4645, 
+    viewOffsetY=20.1448)
+session.viewports['Viewport: 1'].view.setValues(session.views['Left'])
+session.viewports['Viewport: 1'].view.setValues(session.views['Right'])
+session.viewports['Viewport: 1'].view.setValues(session.views['Top'])
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+a = mdb.models['Model-1'].rootAssembly
+a.translate(instanceList=('lower die-1', ), vector=(0.0, 0.0, 50.0))
+#: The instance lower die-1 was translated by 0., 0., 50. with respect to the assembly coordinate system
+session.viewports['Viewport: 1'].view.setValues(nearPlane=216.609, 
+    farPlane=432.022, width=225.972, height=102.441, viewOffsetX=6.85766, 
+    viewOffsetY=-1.95784)
+session.viewports['Viewport: 1'].view.setValues(session.views['Front'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=255.475, 
+    farPlane=400.574, width=115.781, height=52.4874, cameraPosition=(10.8392, 
+    197, 241.245), cameraUpVector=(0.0676253, 0.732648, -0.67724))
+session.viewports['Viewport: 1'].view.fitView()
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+mdb.save()
+#: The model database has been saved to "D:\sami's project\abaqus\first_try.cae".
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(mesh=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+session.viewports['Viewport: 1'].view.setValues(session.views['Top'])
+session.viewports['Viewport: 1'].view.setValues(session.views['Bottom'])
+session.viewports['Viewport: 1'].view.setValues(session.views['Top'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=292.783, 
+    farPlane=363.266, width=77.9092, height=35.4349, viewOffsetX=-2.20228, 
+    viewOffsetY=-4.52805)
+p = mdb.models['Model-1'].parts['lower die']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].view.setValues(session.views['Bottom'])
+session.viewports['Viewport: 1'].view.setValues(session.views['Bottom'])
+session.viewports['Viewport: 1'].view.setValues(session.views['Top'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=289.176, 
+    farPlane=366.874, width=105.278, height=47.8829, viewOffsetX=12.4755, 
+    viewOffsetY=-18.8412)
+session.viewports['Viewport: 1'].view.fitView()
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=268.723, 
+    farPlane=437.644, width=49.6149, height=22.566, viewOffsetX=-10.0817, 
+    viewOffsetY=12.924)
+p = mdb.models['Model-1'].parts['lower die']
+p.deleteMesh()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=270.138, 
+    farPlane=436.228, width=34.4081, height=15.6496, viewOffsetX=-12.0753, 
+    viewOffsetY=15.5953)
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+session.viewports['Viewport: 1'].view.setValues(session.views['Top'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=282.4, 
+    farPlane=373.65, width=139.518, height=63.4558, viewOffsetX=-4.79553, 
+    viewOffsetY=-0.640874)
+p = mdb.models['Model-1'].parts['lower die']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#44cc1183 #19 #60800 ]', ), )
+p.seedEdgeBySize(edges=pickedEdges, size=0.5, deviationFactor=0.1, 
+    minSizeFactor=0.1, constraint=FINER)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=295.909, 
+    farPlane=360.141, width=47.9981, height=21.8306, viewOffsetX=-0.831753, 
+    viewOffsetY=-4.07952)
+p = mdb.models['Model-1'].parts['lower die']
+p.generateMesh()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=298.637, 
+    farPlane=357.413, width=33.4177, height=15.1991, viewOffsetX=0.547023, 
+    viewOffsetY=-5.03991)
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=248.51, 
+    farPlane=457.857, width=202.573, height=92.135, viewOffsetX=-2.99253, 
+    viewOffsetY=-3.29481)
+p = mdb.models['Model-1'].parts['lower die']
+p.deleteMesh()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=250.228, 
+    farPlane=456.138, width=169.418, height=77.0551, viewOffsetX=-4.80447, 
+    viewOffsetY=2.15355)
+session.viewports['Viewport: 1'].view.setValues(session.views['Top'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=284.647, 
+    farPlane=371.402, width=124.259, height=56.5157, viewOffsetX=0.262632, 
+    viewOffsetY=-2.62031)
+p = mdb.models['Model-1'].parts['lower die']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#61000 #40404c31 #600 ]', ), )
+p.seedEdgeBySize(edges=pickedEdges, size=3.0, deviationFactor=0.1, 
+    minSizeFactor=0.1, constraint=FINER)
+p = mdb.models['Model-1'].parts['lower die']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#61000 #40404c31 #600 ]', ), )
+p.seedEdgeBySize(edges=pickedEdges, size=2.0, deviationFactor=0.1, 
+    minSizeFactor=0.1, constraint=FINER)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=296.308, 
+    farPlane=359.742, width=51.1307, height=23.2554, viewOffsetX=8.3504, 
+    viewOffsetY=-2.03814)
+p = mdb.models['Model-1'].parts['lower die']
+p.generateMesh()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=286.496, 
+    farPlane=369.553, width=125.578, height=57.1156, viewOffsetX=15.7554, 
+    viewOffsetY=12.8553)
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=272.961, 
+    farPlane=433.405, width=15.3645, height=6.98812, viewOffsetX=-7.05578, 
+    viewOffsetY=16.249)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=308.507, 
+    farPlane=428.942, width=17.3653, height=7.89814, cameraPosition=(-254.161, 
+    242.909, -37.0204), cameraUpVector=(0.914873, 0.340802, -0.216473), 
+    cameraTarget=(-25.1138, -25.9309, -36.094), viewOffsetX=-7.97462, 
+    viewOffsetY=18.365)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=305.656, 
+    farPlane=431.794, width=37.9016, height=17.2385, viewOffsetX=-14.4928, 
+    viewOffsetY=18.2421)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=289.748, 
+    farPlane=440.457, width=35.9289, height=16.3413, cameraPosition=(-208.846, 
+    233.875, 103.272), cameraUpVector=(0.980667, 0.151155, 0.124278), 
+    cameraTarget=(-29.1856, -32.8847, -42.6711), viewOffsetX=-13.7385, 
+    viewOffsetY=17.2927)
+session.viewports['Viewport: 1'].view.fitView()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=234.868, 
+    farPlane=437.451, width=244.677, height=111.285, cameraPosition=(-138.599, 
+    257.329, -168.694), cameraUpVector=(0.936357, 0.19124, 0.294386))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=247.421, 
+    farPlane=424.898, width=189.972, height=86.4036, viewOffsetX=18.1007, 
+    viewOffsetY=3.41729)
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=262.854, 
+    farPlane=443.512, width=83.6668, height=38.0536, viewOffsetX=2.31584, 
+    viewOffsetY=-0.393747)
+p = mdb.models['Model-1'].parts['lower die']
+p.deleteMesh()
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=261.31, 
+    farPlane=445.056, width=94.1322, height=42.8135, viewOffsetX=-6.3204, 
+    viewOffsetY=12.7369)
+p = mdb.models['Model-1'].parts['lower die']
+c = p.cells
+pickedRegions = c.getSequenceFromMask(mask=('[#115 ]', ), )
+p.setMeshControls(regions=pickedRegions, sizeGrowthRate=1.05)
+p = mdb.models['Model-1'].parts['lower die']
+c = p.cells
+pickedRegions = c.getSequenceFromMask(mask=('[#115 ]', ), )
+p.setMeshControls(regions=pickedRegions, technique=SWEEP, 
+    algorithm=ADVANCING_FRONT)
+p = mdb.models['Model-1'].parts['lower die']
+p.generateMesh()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=264.235, 
+    farPlane=442.131, width=74.3163, height=33.8008, viewOffsetX=-3.95625, 
+    viewOffsetY=15.3758)
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+session.viewports['Viewport: 1'].view.setValues(session.views['Top'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=293.378, 
+    farPlane=362.672, width=73.3835, height=33.3765, viewOffsetX=5.46945, 
+    viewOffsetY=-6.57956)
+p = mdb.models['Model-1'].parts['lower die']
+p.deleteMesh()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=276.679, 
+    farPlane=379.37, width=199.765, height=90.8578, viewOffsetX=17.0505, 
+    viewOffsetY=-0.027689)
+p = mdb.models['Model-1'].parts['lower die']
+c = p.cells
+pickedRegions = c.getSequenceFromMask(mask=('[#115 ]', ), )
+p.setMeshControls(regions=pickedRegions, algorithm=MEDIAL_AXIS)
+p = mdb.models['Model-1'].parts['lower die']
+p.generateMesh()
+p = mdb.models['Model-1'].parts['lower die']
+p.deleteMesh()
+p = mdb.models['Model-1'].parts['lower die']
+c = p.cells
+pickedRegions = c.getSequenceFromMask(mask=('[#115 ]', ), )
+p.setMeshControls(regions=pickedRegions, elemShape=HEX_DOMINATED, 
+    technique=STRUCTURED)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=286.538, 
+    farPlane=369.512, width=111.43, height=50.6811, viewOffsetX=9.52039, 
+    viewOffsetY=-2.3035)
+p = mdb.models['Model-1'].parts['lower die']
+c = p.cells
+pickedRegions = c.getSequenceFromMask(mask=('[#a ]', ), )
+p.setMeshControls(regions=pickedRegions, elemShape=HEX, 
+    technique=SYSTEM_ASSIGN)
+elemType1 = mesh.ElemType(elemCode=C3D8R)
+elemType2 = mesh.ElemType(elemCode=C3D6)
+elemType3 = mesh.ElemType(elemCode=C3D4)
+p = mdb.models['Model-1'].parts['lower die']
+c = p.cells
+cells = c.getSequenceFromMask(mask=('[#a ]', ), )
+pickedRegions =(cells, )
+p.setElementType(regions=pickedRegions, elemTypes=(elemType1, elemType2, 
+    elemType3))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=270.194, 
+    farPlane=385.856, width=222.592, height=101.24, viewOffsetX=48.5844, 
+    viewOffsetY=11.8614)
+a = mdb.models['Model-1'].rootAssembly
+a.regenerate()
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+p = mdb.models['Model-1'].parts['lower die']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=288.245, 
+    farPlane=367.805, width=99.8585, height=45.4179, viewOffsetX=16.2793, 
+    viewOffsetY=-3.33727)
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=270.199, 
+    farPlane=436.167, width=33.9969, height=15.4626, viewOffsetX=-0.411033, 
+    viewOffsetY=12.9262)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=280.849, 
+    farPlane=428.904, width=35.3369, height=16.072, cameraPosition=(129.84, 
+    223.626, 167.542), cameraUpVector=(-0.520573, 0.418056, -0.744468), 
+    cameraTarget=(4.29388, -29.1666, -44.7607), viewOffsetX=-0.427233, 
+    viewOffsetY=13.4356)
+p = mdb.models['Model-1'].parts['lower die']
+c = p.cells
+pickedCells = c.getSequenceFromMask(mask=('[#8 ]', ), )
+v, e, d = p.vertices, p.edges, p.datums
+p.PartitionCellByPlaneThreePoints(point1=v[16], point3=v[12], 
+    cells=pickedCells, point2=p.InterestingPoint(edge=e[75], rule=MIDDLE))
+session.viewports['Viewport: 1'].view.setValues(session.views['Top'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=290.089, 
+    farPlane=365.96, width=87.3613, height=39.7339, viewOffsetX=4.91329, 
+    viewOffsetY=-8.80688)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=281.568, 
+    farPlane=378.636, width=84.7949, height=38.5667, cameraPosition=(13.0929, 
+    299.087, 11.3552), cameraUpVector=(-0.0584947, 0.187586, -0.980505), 
+    cameraTarget=(-0.568182, -22.9649, -49.4434), viewOffsetX=4.76895, 
+    viewOffsetY=-8.54816)
+p = mdb.models['Model-1'].parts['lower die']
+c = p.cells
+pickedCells = c.getSequenceFromMask(mask=('[#4 ]', ), )
+v1, e1, d1 = p.vertices, p.edges, p.datums
+p.PartitionCellByPlaneThreePoints(point3=v1[1], cells=pickedCells, 
+    point1=p.InterestingPoint(edge=e1[13], rule=MIDDLE), 
+    point2=p.InterestingPoint(edge=e1[18], rule=MIDDLE))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=284.359, 
+    farPlane=375.846, width=63.6595, height=28.9538, viewOffsetX=5.23717, 
+    viewOffsetY=-9.02329)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=293.505, 
+    farPlane=362.608, width=65.707, height=29.885, cameraPosition=(0.780512, 
+    303.046, -47.4453), cameraUpVector=(-0.0507427, 0.00826135, -0.998678), 
+    cameraTarget=(-0.572726, -24.9653, -50.09), viewOffsetX=5.40562, 
+    viewOffsetY=-9.31351)
+p = mdb.models['Model-1'].parts['lower die']
+c = p.cells
+pickedCells = c.getSequenceFromMask(mask=('[#9 ]', ), )
+v, e, d = p.vertices, p.edges, p.datums
+p.PartitionCellByPlaneThreePoints(point3=v[16], cells=pickedCells, 
+    point1=p.InterestingPoint(edge=e[28], rule=CENTER), 
+    point2=p.InterestingPoint(edge=e[21], rule=CENTER))
+session.viewports['Viewport: 1'].view.setValues(session.views['Top'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=290.833, 
+    farPlane=365.217, width=82.33, height=37.4456, viewOffsetX=3.14836, 
+    viewOffsetY=-5.8391)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=256.698, 
+    farPlane=394.722, width=72.6671, height=33.0506, cameraPosition=(-199.372, 
+    232.473, -57.0686), cameraUpVector=(-0.137134, -0.134547, -0.981372), 
+    cameraTarget=(-0.130702, -27.9907, -49.2005), viewOffsetX=2.77885, 
+    viewOffsetY=-5.15378)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=249.268, 
+    farPlane=403.51, width=70.5638, height=32.094, cameraPosition=(-232.997, 
+    198.514, -2.12105), cameraUpVector=(-0.315333, -0.12941, -0.940116), 
+    cameraTarget=(-0.52788, -28.1361, -48.8968), viewOffsetX=2.69842, 
+    viewOffsetY=-5.0046)
+p = mdb.models['Model-1'].parts['lower die']
+c = p.cells
+pickedCells = c.getSequenceFromMask(mask=('[#90 ]', ), )
+v1, e1, d1 = p.vertices, p.edges, p.datums
+p.PartitionCellByPlaneThreePoints(point1=v1[3], point2=v1[17], 
+    cells=pickedCells, point3=p.InterestingPoint(edge=e1[58], rule=CENTER))
+session.viewports['Viewport: 1'].view.setValues(session.views['Top'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=290.089, 
+    farPlane=365.96, width=87.3613, height=39.7339, viewOffsetX=1.31249, 
+    viewOffsetY=-6.68417)
+p = mdb.models['Model-1'].parts['lower die']
+c = p.cells
+pickedRegions = c.getSequenceFromMask(mask=('[#ff ]', ), )
+p.setMeshControls(regions=pickedRegions, elemShape=TET, technique=FREE)
+elemType1 = mesh.ElemType(elemCode=C3D20R)
+elemType2 = mesh.ElemType(elemCode=C3D15)
+elemType3 = mesh.ElemType(elemCode=C3D10)
+p = mdb.models['Model-1'].parts['lower die']
+c = p.cells
+cells = c.getSequenceFromMask(mask=('[#ff ]', ), )
+pickedRegions =(cells, )
+p.setElementType(regions=pickedRegions, elemTypes=(elemType1, elemType2, 
+    elemType3))
+p = mdb.models['Model-1'].parts['lower die']
+p.generateMesh()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=279.521, 
+    farPlane=376.528, width=178.326, height=81.1065, viewOffsetX=0.974289, 
+    viewOffsetY=-14.7789)
+p = mdb.models['Model-1'].parts['lower die']
+p.deleteMesh()
+p = mdb.models['Model-1'].parts['lower die']
+c = p.cells
+pickedCells = c.getSequenceFromMask(mask=('[#400 ]', ), )
+e, v, d = p.edges, p.vertices, p.datums
+p.PartitionCellByPlanePointNormal(point=v[19], normal=e[59], cells=pickedCells)
+#* Feature creation failed.
+session.viewports['Viewport: 1'].view.setValues(nearPlane=292.113, 
+    farPlane=363.937, width=73.666, height=33.505, viewOffsetX=11.4265, 
+    viewOffsetY=-15.0821)
+p = mdb.models['Model-1'].parts['lower die']
+c = p.cells
+pickedCells = c.getSequenceFromMask(mask=('[#4000 ]', ), )
+e1, v1, d1 = p.edges, p.vertices, p.datums
+p.PartitionCellByPlanePointNormal(point=v1[16], normal=e1[59], 
+    cells=pickedCells)
+#* Feature creation failed.
+session.viewports['Viewport: 1'].view.setValues(nearPlane=279.343, 
+    farPlane=376.707, width=179.673, height=81.7194, viewOffsetX=-6.57111, 
+    viewOffsetY=-5.60925)
+p = mdb.models['Model-1'].parts['lower die']
+c = p.cells
+pickedCells = c.getSequenceFromMask(mask=('[#400 ]', ), )
+e, v, d = p.edges, p.vertices, p.datums
+p.PartitionCellByPlanePointNormal(point=v[19], normal=e[72], cells=pickedCells)
+#* Feature creation failed.
+p = mdb.models['Model-1'].parts['lower die']
+c = p.cells
+pickedCells = c.getSequenceFromMask(mask=('[#400 ]', ), )
+e1, v1, d1 = p.edges, p.vertices, p.datums
+p.PartitionCellByPlanePointNormal(normal=e1[70], cells=pickedCells, 
+    point=p.InterestingPoint(edge=e1[48], rule=MIDDLE))
+#* Feature creation failed.
+session.viewports['Viewport: 1'].view.setValues(nearPlane=266.5, 
+    farPlane=389.549, width=248.471, height=113.01, viewOffsetX=15.2102, 
+    viewOffsetY=8.15599)
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+p = mdb.models['Model-1'].parts['lower die']
+del p.features['Partition cell-11']
+p = mdb.models['Model-1'].parts['lower die']
+del p.features['Partition cell-10']
+session.viewports['Viewport: 1'].view.setValues(session.views['Top'])
+p = mdb.models['Model-1'].parts['lower die']
+del p.features['Partition cell-9']
+p = mdb.models['Model-1'].parts['lower die']
+del p.features['Partition cell-8']
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=251.772, 
+    farPlane=454.594, width=158.932, height=72.2859, viewOffsetX=3.92593, 
+    viewOffsetY=4.99477)
+p = mdb.models['Model-1'].parts['lower die']
+p.DatumPlaneByPrincipalPlane(principalPlane=XYPLANE, offset=15.0)
+a = mdb.models['Model-1'].rootAssembly
+a.regenerate()
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(mesh=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+session.viewports['Viewport: 1'].partDisplay.setValues(mesh=OFF)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=OFF)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+p1 = mdb.models['Model-1'].parts['lower die']
+session.viewports['Viewport: 1'].setValues(displayedObject=p1)
+p = mdb.models['Model-1'].parts['lower die']
+p.features['Datum plane-1'].setValues(offset=10.0)
+p = mdb.models['Model-1'].parts['lower die']
+p.regenerate()
+p = mdb.models['Model-1'].parts['lower die']
+p.features['Datum plane-1'].setValues(offset=0.0)
+p = mdb.models['Model-1'].parts['lower die']
+p.regenerate()
+p = mdb.models['Model-1'].parts['lower die']
+p.features['Datum plane-1'].setValues(offset=-50.0)
+p = mdb.models['Model-1'].parts['lower die']
+p.regenerate()
+session.viewports['Viewport: 1'].view.setValues(session.views['Top'])
+p = mdb.models['Model-1'].parts['lower die']
+p.features['Datum plane-1'].setValues(offset=-35.0)
+p = mdb.models['Model-1'].parts['lower die']
+p.regenerate()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=309.271, 
+    farPlane=388.716, width=82.7911, height=37.5321, viewOffsetX=5.96112, 
+    viewOffsetY=-9.74689)
+p = mdb.models['Model-1'].parts['lower die']
+p.features['Datum plane-1'].setValues(offset=-33.0)
+p = mdb.models['Model-1'].parts['lower die']
+p.regenerate()
+session.viewports['Viewport: 1'].view.setValues(session.views['Front'])
+session.viewports['Viewport: 1'].view.setValues(session.views['Back'])
+session.viewports['Viewport: 1'].view.setValues(session.views['Top'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=314.367, 
+    farPlane=383.619, width=48.2206, height=21.8601, viewOffsetX=-7.76491, 
+    viewOffsetY=-12.5583)
+p = mdb.models['Model-1'].parts['lower die']
+p.regenerate()
+p = mdb.models['Model-1'].parts['lower die']
+p.regenerate()
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=279.03, 
+    farPlane=472.812, width=95.1712, height=43.1445, viewOffsetX=5.58649, 
+    viewOffsetY=4.62337)
+session.viewports['Viewport: 1'].partDisplay.setValues(mesh=ON)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=OFF)
+p = mdb.models['Model-1'].parts['lower die']
+c = p.cells
+pickedCells = c.getSequenceFromMask(mask=('[#110 ]', ), )
+d = p.datums
+p.PartitionCellByDatumPlane(datumPlane=d[75], cells=pickedCells)
+session.viewports['Viewport: 1'].view.setValues(width=89.7042, height=40.7995, 
+    viewOffsetX=4.52369, viewOffsetY=5.37765)
+session.viewports['Viewport: 1'].view.setValues(session.views['Top'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=305.079, 
+    farPlane=392.908, width=110.916, height=50.4472, viewOffsetX=-3.06399, 
+    viewOffsetY=-1.57457)
+p = mdb.models['Model-1'].parts['lower die']
+c = p.cells
+pickedRegions = c.getSequenceFromMask(mask=('[#28 ]', ), )
+p.setMeshControls(regions=pickedRegions, elemShape=TET, technique=FREE)
+elemType1 = mesh.ElemType(elemCode=C3D20R)
+elemType2 = mesh.ElemType(elemCode=C3D15)
+elemType3 = mesh.ElemType(elemCode=C3D10)
+p = mdb.models['Model-1'].parts['lower die']
+c = p.cells
+cells = c.getSequenceFromMask(mask=('[#28 ]', ), )
+pickedRegions =(cells, )
+p.setElementType(regions=pickedRegions, elemTypes=(elemType1, elemType2, 
+    elemType3))
+p = mdb.models['Model-1'].parts['lower die']
+p.generateMesh()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=309.12, 
+    farPlane=388.867, width=83.5445, height=37.9979, viewOffsetX=11.7288, 
+    viewOffsetY=-3.83588)
+p = mdb.models['Model-1'].parts['lower die']
+p.deleteMesh()
+p = mdb.models['Model-1'].parts['lower die']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#8110200 #85000d00 #6000080 ]', ), 
+    )
+p.seedEdgeBySize(edges=pickedEdges, size=3.0, deviationFactor=0.1, 
+    minSizeFactor=0.1, constraint=FINER)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=308.908, 
+    farPlane=389.078, width=95.7051, height=43.5289, viewOffsetX=12.2845, 
+    viewOffsetY=-4.34744)
+p = mdb.models['Model-1'].parts['lower die']
+e = p.edges
+pickedEdges = e.getSequenceFromMask(mask=('[#8110200 #85000d00 #6000080 ]', ), 
+    )
+p.seedEdgeBySize(edges=pickedEdges, size=3.0, constraint=FINER)
+p = mdb.models['Model-1'].parts['lower die']
+p.generateMesh()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=309.544, 
+    farPlane=388.442, width=90.8871, height=41.3375, viewOffsetX=-6.47215, 
+    viewOffsetY=-6.57133)
+p = mdb.models['Model-1'].parts['lower die']
+p.deleteMesh()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=295.71, 
+    farPlane=402.277, width=195.672, height=88.9962, viewOffsetX=-23.071, 
+    viewOffsetY=-5.78526)
+p = mdb.models['Model-1'].parts['lower die']
+del p.features['Partition cell-8']
+p = mdb.models['Model-1'].parts['lower die']
+del p.features['Datum plane-1']
+session.viewports['Viewport: 1'].view.setValues(nearPlane=302.291, 
+    farPlane=395.696, width=146.8, height=66.7682, viewOffsetX=-10.1578, 
+    viewOffsetY=-6.63633)
+p = mdb.models['Model-1'].parts['lower die']
+c = p.cells
+pickedRegions = c.getSequenceFromMask(mask=('[#a ]', ), )
+p.setMeshControls(regions=pickedRegions, allowMapped=True, sizeGrowthRate=1.25)
+p = mdb.models['Model-1'].parts['lower die']
+p.generateMesh()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=322.016, 
+    farPlane=375.971, width=13.3234, height=6.05977, viewOffsetX=13.6267, 
+    viewOffsetY=-12.9568)
+session.viewports['Viewport: 1'].view.fitView()
+p = mdb.models['Model-1'].parts['lower die']
+p.deleteMesh()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=279.61, 
+    farPlane=376.44, width=177.655, height=80.8018, viewOffsetX=18.9498, 
+    viewOffsetY=-6.22955)
+p = mdb.models['Model-1'].parts['lower die']
+c = p.cells
+pickedCells = c.getSequenceFromMask(mask=('[#115 ]', ), )
+e, v, d1 = p.edges, p.vertices, p.datums
+p.PartitionCellByPlaneNormalToEdge(edge=e[38], cells=pickedCells, 
+    point=p.InterestingPoint(edge=e[38], rule=MIDDLE))
+p = mdb.models['Model-1'].parts['lower die']
+del p.features['Partition cell-8']
+session.viewports['Viewport: 1'].view.setValues(nearPlane=286.601, 
+    farPlane=369.448, width=111.001, height=50.4858, viewOffsetX=-4.86167, 
+    viewOffsetY=-8.71794)
+p = mdb.models['Model-1'].parts['lower die']
+c = p.cells
+pickedCells = c.getSequenceFromMask(mask=('[#10 ]', ), )
+e1, v1, d = p.edges, p.vertices, p.datums
+p.PartitionCellByPlaneNormalToEdge(edge=e1[37], point=v1[21], 
+    cells=pickedCells)
+#* Feature creation failed.
+session.viewports['Viewport: 1'].view.setValues(nearPlane=290.785, 
+    farPlane=365.265, width=82.6532, height=37.5926, viewOffsetX=-8.10573, 
+    viewOffsetY=-10.4404)
+p = mdb.models['Model-1'].parts['lower die']
+c = p.cells
+pickedCells = c.getSequenceFromMask(mask=('[#10 ]', ), )
+e, v, d1 = p.edges, p.vertices, p.datums
+p.PartitionCellByPlaneNormalToEdge(edge=e[27], point=v[16], cells=pickedCells)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=282.157, 
+    farPlane=373.892, width=158.407, height=72.0469, viewOffsetX=8.17403, 
+    viewOffsetY=1.15274)
+p = mdb.models['Model-1'].parts['lower die']
+del p.features['Partition cell-8']
+session.viewports['Viewport: 1'].view.setValues(nearPlane=289.25, 
+    farPlane=366.8, width=93.0477, height=42.3202, viewOffsetX=0.364289, 
+    viewOffsetY=-13.0723)
+p = mdb.models['Model-1'].parts['lower die']
+c = p.cells
+pickedCells = c.getSequenceFromMask(mask=('[#110 ]', ), )
+e1, v1, d = p.edges, p.vertices, p.datums
+p.PartitionCellByPlaneNormalToEdge(edge=e1[27], point=v1[16], 
+    cells=pickedCells)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=275.146, 
+    farPlane=380.904, width=211.338, height=96.1214, viewOffsetX=0.920062, 
+    viewOffsetY=4.7354)
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+p = mdb.models['Model-1'].parts['lower die']
+p.generateMesh()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=271.281, 
+    farPlane=435.085, width=30.1599, height=13.7174, viewOffsetX=20.6495, 
+    viewOffsetY=-4.83344)
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=250.487, 
+    farPlane=455.879, width=167.529, height=76.1958, viewOffsetX=-1.8332, 
+    viewOffsetY=3.54044)
+session.viewports['Viewport: 1'].view.setValues(session.views['Bottom'])
+session.viewports['Viewport: 1'].view.setValues(session.views['Top'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=279.698, 
+    farPlane=376.351, width=176.988, height=80.498, viewOffsetX=-2.04034, 
+    viewOffsetY=1.43224)
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=259.585, 
+    farPlane=446.781, width=105.829, height=48.1336, viewOffsetX=15.677, 
+    viewOffsetY=-10.0052)
+p = mdb.models['Model-1'].parts['lower die']
+del p.features['Partition cell-8']
+#: Warning: Mesh deleted in 6 regions due to geometry association failure.
+p = mdb.models['Model-1'].parts['lower die']
+p.deleteMesh()
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+session.viewports['Viewport: 1'].view.setValues(session.views['Top'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=289.303, 
+    farPlane=366.746, width=92.6857, height=42.1556, viewOffsetX=-8.33825, 
+    viewOffsetY=-12.3964)
+p = mdb.models['Model-1'].parts['lower die']
+c = p.cells
+pickedCells = c.getSequenceFromMask(mask=('[#350 ]', ), )
+e, v, d1 = p.edges, p.vertices, p.datums
+p.PartitionCellByPlaneNormalToEdge(edge=e[27], point=v[16], cells=pickedCells)
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+p = mdb.models['Model-1'].parts['lower die']
+p.generateMesh()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=254.18, 
+    farPlane=452.186, width=159.799, height=72.6802, viewOffsetX=6.44461, 
+    viewOffsetY=-3.11049)
+session.viewports['Viewport: 1'].view.setValues(session.views['Top'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=273.64, 
+    farPlane=382.41, width=222.686, height=101.283, viewOffsetX=1.09017, 
+    viewOffsetY=-6.51219)
+mdb.save()
+#: The model database has been saved to "D:\sami's project\abaqus\first_try.cae".
+mdb.save()
+#: The model database has been saved to "D:\sami's project\abaqus\first_try.cae".
+a = mdb.models['Model-1'].rootAssembly
+a.regenerate()
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(mesh=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+a = mdb.models['Model-1'].rootAssembly
+a.regenerate()
+mdb.save()
+#: The model database has been saved to "D:\sami's project\abaqus\first_try.cae".

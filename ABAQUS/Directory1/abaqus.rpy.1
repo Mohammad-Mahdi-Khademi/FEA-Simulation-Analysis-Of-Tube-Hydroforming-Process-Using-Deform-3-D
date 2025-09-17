@@ -1,0 +1,136 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2023 replay file
+# Internal Version: 2022_09_28-21.41.55 183150
+# Run by Amir on Fri Jun 20 19:57:48 2025
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=114.44270324707, 
+    height=122.148155212402)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+openMdb(pathName="D:/sami's project/abaqus/first_try.cae")
+#: The model database "D:\sami's project\abaqus\first_try.cae" has been opened.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+p = mdb.models['Model-1'].parts['lower die']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+s = mdb.models['Model-1'].ConstrainedSketch(name='__profile__', 
+    sheetSize=200.0)
+g, v, d, c = s.geometry, s.vertices, s.dimensions, s.constraints
+s.setPrimaryObject(option=STANDALONE)
+s.CircleByCenterPerimeter(center=(0.0, 0.0), point1=(53.75, 0.0))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=148.684, 
+    farPlane=228.44, width=304.981, height=138.258, cameraPosition=(-26.1619, 
+    4.50531, 188.562), cameraTarget=(-26.1619, 4.50531, 0))
+s.RadialDimension(curve=g[2], textPoint=(-105.337135314941, 10.3806648254395), 
+    radius=12.0)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=164.254, 
+    farPlane=212.87, width=164.267, height=74.4681, cameraPosition=(-14.8424, 
+    1.16086, 188.562), cameraTarget=(-14.8424, 1.16086, 0))
+s.CircleByCenterPerimeter(center=(0.0, 0.0), point1=(6.25, 1.25))
+s.RadialDimension(curve=g[3], textPoint=(-50.5029945373535, -10.7567319869995), 
+    radius=10.7)
+p = mdb.models['Model-1'].Part(name='work-tube', dimensionality=THREE_D, 
+    type=DEFORMABLE_BODY)
+p = mdb.models['Model-1'].parts['work-tube']
+p.BaseSolidExtrude(sketch=s, depth=120.0)
+s.unsetPrimaryObject()
+p = mdb.models['Model-1'].parts['work-tube']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+del mdb.models['Model-1'].sketches['__profile__']
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=ON, 
+    engineeringFeatures=ON)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=OFF)
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+p = mdb.models['Model-1'].parts['work-tube']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+mdb.models['Model-1'].Material(name='inconel-718')
+mdb.models['Model-1'].HomogeneousSolidSection(name='work-tube', 
+    material='inconel-718', thickness=None)
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a = mdb.models['Model-1'].rootAssembly
+p = mdb.models['Model-1'].parts['work-tube']
+a.Instance(name='work-tube-1', part=p, dependent=ON)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=357.563, 
+    farPlane=633.153, width=192.056, height=87.0658, viewOffsetX=1.14233, 
+    viewOffsetY=-1.08461)
+session.viewports['Viewport: 1'].assemblyDisplay.hideInstances(instances=(
+    'lower die-1', ))
+session.viewports['Viewport: 1'].assemblyDisplay.hideInstances(instances=(
+    'upper die-1', ))
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+session.viewports['Viewport: 1'].view.setValues(session.views['Front'])
+session.viewports['Viewport: 1'].view.setValues(session.views['Back'])
+session.viewports['Viewport: 1'].view.setValues(session.views['Bottom'])
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=165.579, 
+    farPlane=313.13, width=191.776, height=86.939, viewOffsetX=26.7945, 
+    viewOffsetY=-0.613429)
+session.viewports['Viewport: 1'].view.fitView()
+a = mdb.models['Model-1'].rootAssembly
+a.translate(instanceList=('work-tube-1', ), vector=(0.0, 0.0, -60.0))
+#: The instance work-tube-1 was translated by 0., 0., -60. with respect to the assembly coordinate system
+session.viewports['Viewport: 1'].view.fitView()
+a = mdb.models['Model-1'].rootAssembly
+a.rotate(instanceList=('work-tube-1', ), axisPoint=(0.0, 0.0, 0.0), 
+    axisDirection=(0.0, 1.0, 0.0), angle=90.0)
+#: The instance work-tube-1 was rotated by 90. degrees about the axis defined by the point 0., 0., 0. and the vector 0., 1., 0.
+session.viewports['Viewport: 1'].assemblyDisplay.showInstances(instances=(
+    'upper die-1', ))
+session.viewports['Viewport: 1'].assemblyDisplay.showInstances(instances=(
+    'lower die-1', ))
+session.viewports['Viewport: 1'].view.fitView()
+mdb.save()
+#: The model database has been saved to "D:\sami's project\abaqus\first_try.cae".
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(interactions=ON, 
+    constraints=ON, connectors=ON, engineeringFeatures=ON, 
+    adaptiveMeshConstraints=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, interactions=OFF, constraints=OFF, 
+    engineeringFeatures=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(mesh=ON, loads=OFF, 
+    bcs=OFF, predefinedFields=OFF, connectors=OFF)
+session.viewports['Viewport: 1'].assemblyDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+p = mdb.models['Model-1'].parts['work-tube']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+session.viewports['Viewport: 1'].partDisplay.setValues(sectionAssignments=OFF, 
+    engineeringFeatures=OFF, mesh=ON)
+session.viewports['Viewport: 1'].partDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+p = mdb.models['Model-1'].parts['work-tube']
+c = p.cells
+pickedCells = c.getSequenceFromMask(mask=('[#1 ]', ), )
+v1, e, d1 = p.vertices, p.edges, p.datums
+p.PartitionCellByPlaneThreePoints(point3=v1[1], cells=pickedCells, 
+    point1=p.InterestingPoint(edge=e[2], rule=MIDDLE), 
+    point2=p.InterestingPoint(edge=e[0], rule=CENTER))
+p = mdb.models['Model-1'].parts['work-tube']
+p.seedPart(size=1.0, deviationFactor=0.1, minSizeFactor=0.1)
+p = mdb.models['Model-1'].parts['work-tube']
+p.generateMesh()
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+a = mdb.models['Model-1'].rootAssembly
+a.regenerate()
+mdb.save()
+#: The model database has been saved to "D:\sami's project\abaqus\first_try.cae".
+mdb.save()
+#: The model database has been saved to "D:\sami's project\abaqus\first_try.cae".

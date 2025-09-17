@@ -1,0 +1,532 @@
+# -*- coding: mbcs -*-
+#
+# Abaqus/CAE Release 2023 replay file
+# Internal Version: 2022_09_28-21.41.55 183150
+# Run by mmahd on Sun Aug  3 19:18:52 2025
+#
+
+# from driverUtils import executeOnCaeGraphicsStartup
+# executeOnCaeGraphicsStartup()
+#: Executing "onCaeGraphicsStartup()" in the site directory ...
+from abaqus import *
+from abaqusConstants import *
+session.Viewport(name='Viewport: 1', origin=(0.0, 0.0), width=204.697906494141, 
+    height=114.59375)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].maximize()
+from caeModules import *
+from driverUtils import executeOnCaeStartup
+executeOnCaeStartup()
+openMdb('first_try.cae')
+#: The model database "C:\Users\mmahd\OneDrive\Desktop\sami's project\abaqus\first_try.cae" has been opened.
+session.viewports['Viewport: 1'].setValues(displayedObject=None)
+session.viewports['Viewport: 1'].partDisplay.geometryOptions.setValues(
+    referenceRepresentation=ON)
+p = mdb.models['Model-1'].parts['axial plunge']
+session.viewports['Viewport: 1'].setValues(displayedObject=p)
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(interactions=ON, 
+    constraints=ON, connectors=ON, engineeringFeatures=ON, 
+    optimizationTasks=OFF, geometricRestrictions=OFF, stopConditions=OFF)
+leaf = dgm.Leaf(leafType=DEFAULT_MODEL)
+session.viewports['Viewport: 1'].assemblyDisplay.displayGroup.add(leaf=leaf)
+i1 = mdb.models['Model-1'].rootAssembly.allInstances['lower die-1']
+i2 = mdb.models['Model-1'].rootAssembly.allInstances['upper die-1']
+i3 = mdb.models['Model-1'].rootAssembly.allInstances['work-tube-1']
+i4 = mdb.models['Model-1'].rootAssembly.allInstances['counter plunge-1']
+leaf = dgm.LeafFromInstance(instances=(i1, i2, i3, i4, ))
+session.viewports['Viewport: 1'].assemblyDisplay.displayGroup.remove(leaf=leaf)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=354.045, 
+    farPlane=627.882, width=227.297, height=91.598, viewOffsetX=14.6417, 
+    viewOffsetY=-4.59904)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=324.37, 
+    farPlane=588.465, width=208.245, height=83.9204, cameraPosition=(-272.416, 
+    163.862, 357.673), cameraUpVector=(-0.353375, 0.279217, -0.89284), 
+    cameraTarget=(18.9708, -24.7366, -3.70238), viewOffsetX=13.4144, 
+    viewOffsetY=-4.21356)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(visibleInstances=())
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(visibleInstances=(
+    'work-tube-1', ))
+i1 = mdb.models['Model-1'].rootAssembly.allInstances['lower die-1']
+i2 = mdb.models['Model-1'].rootAssembly.allInstances['upper die-1']
+i3 = mdb.models['Model-1'].rootAssembly.allInstances['work-tube-1']
+i4 = mdb.models['Model-1'].rootAssembly.allInstances['axial plunge-1']
+i5 = mdb.models['Model-1'].rootAssembly.allInstances['axial plunge-2']
+i6 = mdb.models['Model-1'].rootAssembly.allInstances['counter plunge-1']
+leaf = dgm.LeafFromInstance(instances=(i1, i2, i3, i4, i5, i6, ))
+session.viewports['Viewport: 1'].assemblyDisplay.displayGroup.add(leaf=leaf)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=341.303, 
+    farPlane=581.216, width=219.116, height=88.3013, cameraPosition=(295.254, 
+    -6.78188, 386.405), cameraUpVector=(-0.0789315, 0.944965, -0.317506), 
+    cameraTarget=(-36.6795, 16.3644, 11.7686), viewOffsetX=14.1147, 
+    viewOffsetY=-4.43352)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=346.567, 
+    farPlane=581.301, width=222.495, height=89.6632, cameraPosition=(462.281, 
+    9.19495, 74.2395), cameraUpVector=(-0.341647, 0.931828, 0.122367), 
+    cameraTarget=(-38.0411, 8.5835, 46.9312), viewOffsetX=14.3324, 
+    viewOffsetY=-4.5019)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=359.346, 
+    farPlane=568.522, width=118.795, height=47.8729, viewOffsetX=26.9385, 
+    viewOffsetY=-6.74911)
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=324.335, 
+    farPlane=600.714, width=237.489, height=95.7054, viewOffsetX=14.799, 
+    viewOffsetY=4.57846)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(visibleInstances=(
+    'axial plunge-2', 'work-tube-1'))
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(visibleInstances=(
+    'axial plunge-1', 'work-tube-1'))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=342.806, 
+    farPlane=583.976, width=129.255, height=52.0882, viewOffsetX=33.2451, 
+    viewOffsetY=7.88544)
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Step-1')
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Initial')
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(step='Step-1')
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(visibleInstances=(
+    'work-tube-1', ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=353.525, 
+    farPlane=574.761, width=51.8721, height=20.9038, viewOffsetX=37.6147, 
+    viewOffsetY=-7.72104)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(visibleInstances=(
+    'axial plunge-1', ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=295.708, 
+    farPlane=525.998, width=43.3887, height=17.4851, cameraPosition=(-310.888, 
+    187.896, 224.923), cameraUpVector=(-0.375254, -0.534151, -0.75754), 
+    cameraTarget=(29.9082, -56.1058, 23.5417), viewOffsetX=31.463, 
+    viewOffsetY=-6.45831)
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=336.551, 
+    farPlane=593.468, width=168.834, height=68.0381, viewOffsetX=25.6237, 
+    viewOffsetY=9.63991)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=345.082, 
+    farPlane=547.625, width=173.114, height=69.7629, cameraPosition=(112.914, 
+    215.592, 406.516), cameraUpVector=(-0.97932, 0.000475064, -0.202315), 
+    cameraTarget=(34.8287, -27.3402, 17.7739), viewOffsetX=26.2732, 
+    viewOffsetY=9.88428)
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=312.703, 
+    farPlane=606.789, width=329.615, height=132.831, cameraPosition=(-243.056, 
+    144.811, 392.45), cameraUpVector=(-0.395676, 0.353843, -0.847488), 
+    cameraTarget=(6.17127, -6.28076, 30.1094))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=350.533, 
+    farPlane=568.959, width=84.7701, height=34.1614, viewOffsetX=31.9058, 
+    viewOffsetY=-1.93741)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(visibleInstances=(
+    'work-tube-1', ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=384.438, 
+    farPlane=593.116, width=92.9693, height=37.4655, cameraPosition=(211.673, 
+    181.143, 433.356), cameraUpVector=(-0.809922, 0.54489, -0.217073), 
+    cameraTarget=(0.881466, 3.16346, 59.0249), viewOffsetX=34.9918, 
+    viewOffsetY=-2.1248)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=398.076, 
+    farPlane=611.13, width=96.2674, height=38.7946, cameraPosition=(502.616, 
+    -50.2266, 14.4527), cameraUpVector=(-0.198996, 0.933884, 0.297088), 
+    cameraTarget=(42.6447, 4.94906, 54.6518), viewOffsetX=36.2332, 
+    viewOffsetY=-2.20018)
+a = mdb.models['Model-1'].rootAssembly
+s1 = a.instances['axial plunge-1'].faces
+side1Faces1 = s1.getSequenceFromMask(mask=('[#4 ]', ), )
+region1=regionToolset.Region(side1Faces=side1Faces1)
+a = mdb.models['Model-1'].rootAssembly
+s1 = a.instances['work-tube-1'].faces
+side1Faces1 = s1.getSequenceFromMask(mask=('[#104 ]', ), )
+region2=regionToolset.Region(side1Faces=side1Faces1)
+mdb.models['Model-1'].SurfaceToSurfaceContactExp(name ='Int-46', 
+    createStepName='Step-1', main = region1, secondary = region2, 
+    mechanicalConstraint=KINEMATIC, sliding=FINITE, 
+    interactionProperty='IntProp-1', initialClearance=OMIT, datumAxis=None, 
+    clearanceRegion=None)
+#: The interaction "Int-46" has been created.
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(visibleInstances=(
+    'axial plunge-2', ))
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=343.775, 
+    farPlane=586.244, width=118.974, height=47.9449, viewOffsetX=-1.31678, 
+    viewOffsetY=24.2223)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(visibleInstances=(
+    'work-tube-1', ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=361.393, 
+    farPlane=601.924, width=125.071, height=50.4021, cameraPosition=(-438.894, 
+    188.335, -33.9285), cameraUpVector=(0.612384, 0.231269, -0.755976), 
+    cameraTarget=(-17.4434, 9.61764, 47.7603), viewOffsetX=-1.38427, 
+    viewOffsetY=25.4636)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=367.774, 
+    farPlane=595.543, width=77.5855, height=31.266, viewOffsetX=-13.398, 
+    viewOffsetY=23.7921)
+a = mdb.models['Model-1'].rootAssembly
+s1 = a.instances['axial plunge-2'].faces
+side1Faces1 = s1.getSequenceFromMask(mask=('[#4 ]', ), )
+region1=regionToolset.Region(side1Faces=side1Faces1)
+a = mdb.models['Model-1'].rootAssembly
+s1 = a.instances['work-tube-1'].faces
+side1Faces1 = s1.getSequenceFromMask(mask=('[#210 ]', ), )
+region2=regionToolset.Region(side1Faces=side1Faces1)
+mdb.models['Model-1'].SurfaceToSurfaceContactExp(name ='Int-47', 
+    createStepName='Step-1', main = region1, secondary = region2, 
+    mechanicalConstraint=KINEMATIC, sliding=FINITE, 
+    interactionProperty='IntProp-1', initialClearance=OMIT, datumAxis=None, 
+    clearanceRegion=None)
+#: The interaction "Int-47" has been created.
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(visibleInstances=(
+    'axial plunge-1', 'axial plunge-2', 'counter plunge-1', 'lower die-1', 
+    'upper die-1', 'work-tube-1'))
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(interactions=OFF, 
+    constraints=OFF, connectors=OFF, engineeringFeatures=OFF)
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+#: The job input file "Job-1.inp" has been submitted for analysis.
+#: Error in job Job-1: A REDUNDANT CONTACT CONDITION HAS BEEN SPECIFIED. THE REDUNDANCY INVOLVES THE CONTACT PAIR REFERENCING SURFACES ASSEMBLY_CP-23-axial plunge-2 AND ASSEMBLY_CP-24-WORK-TUBE-1 AND THE CONTACT PAIR REFERENCING SURFACES ASSEMBLY__PICKEDSURF160 AND ASSEMBLY__PICKEDSURF161.
+#: Job Job-1: Analysis Input File Processor aborted due to errors.
+#: Error in job Job-1: Analysis Input File Processor exited with an error - Please see the  Job-1.dat file for possible error messages if the file exists.
+#: Job Job-1 aborted due to errors.
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(interactions=ON, 
+    constraints=ON, connectors=ON, engineeringFeatures=ON)
+mdb.models['Model-1'].interactions['CP-24-axial plunge-2-work-tube-1'].suppress(
+    )
+mdb.models['Model-1'].interactions['CP-23-axial plunge-2-work-tube-1'].suppress(
+    )
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(interactions=OFF, 
+    constraints=OFF, connectors=OFF, engineeringFeatures=OFF)
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+#: The job input file "Job-1.inp" has been submitted for analysis.
+#: Job Job-1: Analysis Input File Processor completed successfully.
+#: Job Job-1: Abaqus/Explicit Packager completed successfully.
+o3 = session.openOdb(
+    name="C:/Users/mmahd/OneDrive/Desktop/sami's project/abaqus/Job-1.odb")
+#: Model: C:/Users/mmahd/OneDrive/Desktop/sami's project/abaqus/Job-1.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     6
+#: Number of Meshes:             7
+#: Number of Element Sets:       2
+#: Number of Node Sets:          15
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.setValues(viewCut=ON)
+session.viewports['Viewport: 1'].odbDisplay.setValues(viewCut=OFF)
+session.viewports['Viewport: 1'].odbDisplay.setValues(viewCutNames=('Y-Plane', 
+    ), viewCut=ON)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='U', outputPosition=NODAL, refinement=(INVARIANT, 
+    'Magnitude'), )
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(
+    plotState=CONTOURS_ON_DEF)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=374.827, 
+    farPlane=627.307, width=89.4153, height=36.0333, viewOffsetX=31.9695, 
+    viewOffsetY=-6.16017)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=TIME_HISTORY)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=361.555, 
+    farPlane=640.579, width=196.884, height=79.3418, viewOffsetX=45.3804, 
+    viewOffsetY=-6.6117)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+#: Job Job-1: Abaqus/Explicit completed successfully.
+#: Job Job-1 completed successfully. 
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs["C:/Users/mmahd/OneDrive/Desktop/sami's project/abaqus/Job-1.odb"])
+o3 = session.openOdb(
+    name="C:/Users/mmahd/OneDrive/Desktop/sami's project/abaqus/Job-1.odb")
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=TIME_HISTORY)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(
+    adaptiveMeshConstraints=ON)
+mdb.models['Model-1'].steps['Step-1'].setValues(timePeriod=1.0, 
+    improvedDtMethod=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=ON, bcs=ON, 
+    predefinedFields=ON, connectors=ON, adaptiveMeshConstraints=OFF)
+mdb.save()
+#: The model database has been saved to "C:\Users\mmahd\OneDrive\Desktop\sami's project\abaqus\first_try.cae".
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(loads=OFF, bcs=OFF, 
+    predefinedFields=OFF, connectors=OFF)
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+#: The job input file "Job-1.inp" has been submitted for analysis.
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs["C:/Users/mmahd/OneDrive/Desktop/sami's project/abaqus/Job-1.odb"])
+o3 = session.openOdb(
+    name="C:/Users/mmahd/OneDrive/Desktop/sami's project/abaqus/Job-1.odb")
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+#: Job Job-1: Analysis Input File Processor completed successfully.
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+#* VisError: The output database C:/Users/mmahd/OneDrive/Desktop/sami's 
+#* project/abaqus/Job-1.odb disk file has changed.
+#* 
+#* The current plot operation has been canceled, re-open the file to view the 
+#* results
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+#: Job Job-1: Abaqus/Explicit Packager completed successfully.
+o3 = session.openOdb(
+    name="C:/Users/mmahd/OneDrive/Desktop/sami's project/abaqus/Job-1.odb")
+#: Model: C:/Users/mmahd/OneDrive/Desktop/sami's project/abaqus/Job-1.odb
+#: Number of Assemblies:         1
+#: Number of Assembly instances: 0
+#: Number of Part instances:     6
+#: Number of Meshes:             7
+#: Number of Element Sets:       2
+#: Number of Node Sets:          15
+#: Number of Steps:              1
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.setValues(viewCut=ON)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='U', outputPosition=NODAL, refinement=(INVARIANT, 
+    'Magnitude'), )
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(
+    plotState=CONTOURS_ON_DEF)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=352.138, 
+    farPlane=649.996, width=240.503, height=96.92, viewOffsetX=-0.683377, 
+    viewOffsetY=9.29966)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='U', outputPosition=NODAL, refinement=(COMPONENT, 'U1'), )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='U', outputPosition=NODAL, refinement=(INVARIANT, 
+    'Magnitude'), )
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=TIME_HISTORY)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=TIME_HISTORY)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.animationOptions.setValues(frameRate=1)
+session.animationOptions.setValues(frameRate=23)
+session.animationOptions.setValues(frameRate=49)
+session.animationOptions.setValues(frameRate=65)
+session.animationOptions.setValues(frameRate=82)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=381.79, 
+    farPlane=620.344, width=36.0018, height=14.5083, viewOffsetX=29.8624, 
+    viewOffsetY=-9.12106)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=TIME_HISTORY)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=374.349, 
+    farPlane=627.784, width=86.7804, height=34.9715, viewOffsetX=32.0111, 
+    viewOffsetY=-8.6348)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=TIME_HISTORY)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.animationOptions.setValues(frameRate=67)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=TIME_HISTORY)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.animationOptions.setValues(frameRate=44)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=HARMONIC)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs["C:/Users/mmahd/OneDrive/Desktop/sami's project/abaqus/Job-1.odb"])
+o3 = session.openOdb(
+    name="C:/Users/mmahd/OneDrive/Desktop/sami's project/abaqus/Job-1.odb")
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    UNDEFORMED, ))
+session.viewports['Viewport: 1'].view.setValues(nearPlane=364.511, 
+    farPlane=637.623, width=174.052, height=70.141, viewOffsetX=63.6883, 
+    viewOffsetY=-15.4998)
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    SYMBOLS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs["C:/Users/mmahd/OneDrive/Desktop/sami's project/abaqus/Job-1.odb"])
+o3 = session.openOdb(
+    name="C:/Users/mmahd/OneDrive/Desktop/sami's project/abaqus/Job-1.odb")
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=325.56, 
+    farPlane=579.594, width=93.1867, height=37.5531, viewOffsetX=29.1856, 
+    viewOffsetY=6.4561)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs["C:/Users/mmahd/OneDrive/Desktop/sami's project/abaqus/Job-1.odb"])
+o3 = session.openOdb(
+    name="C:/Users/mmahd/OneDrive/Desktop/sami's project/abaqus/Job-1.odb")
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=319.233, 
+    farPlane=585.921, width=144.486, height=58.226, viewOffsetX=18.2342, 
+    viewOffsetY=10.8988)
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+session.viewports['Viewport: 1'].view.setValues(nearPlane=314.779, 
+    farPlane=583.607, width=144.201, height=58.1114, viewOffsetX=1.00661, 
+    viewOffsetY=9.54437)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=315.884, 
+    farPlane=582.501, width=144.708, height=58.3155, viewOffsetX=7.89543, 
+    viewOffsetY=15.0486)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=325.581, 
+    farPlane=572.804, width=74.3299, height=29.9541, viewOffsetX=47.3411, 
+    viewOffsetY=12.499)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=324.988, 
+    farPlane=573.398, width=74.1944, height=29.8995, viewOffsetX=6.50766, 
+    viewOffsetY=13.9085)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=315.26, 
+    farPlane=583.126, width=153.809, height=61.9832, viewOffsetX=15.8968, 
+    viewOffsetY=10.4913)
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs["C:/Users/mmahd/OneDrive/Desktop/sami's project/abaqus/Job-1.odb"])
+o3 = session.openOdb(
+    name="C:/Users/mmahd/OneDrive/Desktop/sami's project/abaqus/Job-1.odb")
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    SYMBOLS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=318.852, 
+    farPlane=579.534, width=112.127, height=45.1858, viewOffsetX=22.2339, 
+    viewOffsetY=9.44575)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs["C:/Users/mmahd/OneDrive/Desktop/sami's project/abaqus/Job-1.odb"])
+o3 = session.openOdb(
+    name="C:/Users/mmahd/OneDrive/Desktop/sami's project/abaqus/Job-1.odb")
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=306.946, 
+    farPlane=591.44, width=217.717, height=87.7372, viewOffsetX=42.9281, 
+    viewOffsetY=3.98864)
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(INVARIANT, 
+    'Mises'), )
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='S', outputPosition=INTEGRATION_POINT, refinement=(COMPONENT, 
+    'S11'), )
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(
+    plotState=SYMBOLS_ON_DEF)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].odbDisplay.display.setValues(plotState=(
+    CONTOURS_ON_DEF, ))
+session.viewports['Viewport: 1'].odbDisplay.setPrimaryVariable(
+    variableLabel='U', outputPosition=NODAL, refinement=(INVARIANT, 
+    'Magnitude'), )
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=324.81, 
+    farPlane=573.575, width=71.1032, height=28.6538, viewOffsetX=10.0646, 
+    viewOffsetY=15.2161)
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs["C:/Users/mmahd/OneDrive/Desktop/sami's project/abaqus/Job-1.odb"])
+o3 = session.openOdb(
+    name="C:/Users/mmahd/OneDrive/Desktop/sami's project/abaqus/Job-1.odb")
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].view.setValues(session.views['Iso'])
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=322.593, 
+    farPlane=575.793, width=90.0827, height=36.3023, viewOffsetX=21.6911, 
+    viewOffsetY=10.5912)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=NONE)
+mdb.jobs['Job-1'].kill()
+#: Error in job Job-1: Process terminated by external request (SIGTERM or SIGINT received).
+#: Job Job-1: Abaqus/Explicit was terminated prior to analysis completion.
+#: ERROR in job messaging system: Error in connection to analysis
+#: Error in job Job-1: Abaqus/Explicit Analysis exited with an error - Please see the  status file for possible error messages if the file exists.
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].setValues(
+    displayedObject=session.odbs["C:/Users/mmahd/OneDrive/Desktop/sami's project/abaqus/Job-1.odb"])
+o3 = session.openOdb(
+    name="C:/Users/mmahd/OneDrive/Desktop/sami's project/abaqus/Job-1.odb")
+session.viewports['Viewport: 1'].setValues(displayedObject=o3)
+session.viewports['Viewport: 1'].makeCurrent()
+session.viewports['Viewport: 1'].view.setValues(nearPlane=327.615, 
+    farPlane=570.77, width=63.1129, height=25.4338, viewOffsetX=12.2129, 
+    viewOffsetY=13.3091)
+session.viewports['Viewport: 1'].animationController.setValues(
+    animationType=SCALE_FACTOR)
+session.viewports['Viewport: 1'].animationController.play(duration=UNLIMITED)
+session.viewports['Viewport: 1'].view.setValues(nearPlane=312.986, 
+    farPlane=585.4, width=171.311, height=69.0361, viewOffsetX=43.6898, 
+    viewOffsetY=10.9122)
+a = mdb.models['Model-1'].rootAssembly
+session.viewports['Viewport: 1'].setValues(displayedObject=a)
+session.viewports['Viewport: 1'].assemblyDisplay.setValues(mesh=ON)
+session.viewports['Viewport: 1'].assemblyDisplay.meshOptions.setValues(
+    meshTechnique=ON)
+mdb.save()
+#: The model database has been saved to "C:\Users\mmahd\OneDrive\Desktop\sami's project\abaqus\first_try.cae".
