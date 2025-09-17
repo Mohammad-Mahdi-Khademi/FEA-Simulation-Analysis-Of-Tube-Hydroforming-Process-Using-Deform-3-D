@@ -81,10 +81,22 @@ The study includes:
 
 ## 👨‍🎓 Authors
 - **Mohammad Mahdi Khademi**  
-- **Negar Naqavian**  
+- **Negar Naghavian**  
 
 **Supervised by:** Dr. Ramin Hashemi  
 **Course:** Plasticity and Metal Forming  
+
+## 📸 Simulation Results
+
+### Stress Distribution (Von Mises)
+![Stress Distribution](images/von_mises.png)
+
+### Plastic Strain (PEEQ)
+![Plastic Strain](images/plastic_strain.png)
+
+### Final Deformed Shape
+![Deformation](images/deformation.png)
+
 
 ---
 
